@@ -65,7 +65,7 @@
 
 <!-- ===== SEIRI ===== -->
 <section id="seiri" class="detalle">
-  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=1200')">
+  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200')">
     <div class="detalle-hero-text">
       <span class="badge seiri">1</span>
       <div>
@@ -387,7 +387,9 @@ function mostrarPregunta(i) {
   document.getElementById("q-progreso").textContent = `Pregunta ${i + 1} / ${preguntas.length}`;
   document.getElementById("q-img").src = p.img;
   document.getElementById("q-texto").textContent = p.q;
-  document.getElementById("feedback").textContent = "";
+  const fb = document.getElementById("feedback");
+  fb.textContent = "";
+  fb.className = "feedback";
 
   const grid = document.getElementById("opciones");
   grid.innerHTML = "";
