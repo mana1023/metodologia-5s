@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metodología 5S</title>
+<link rel="stylesheet" href="metodologia.css">
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Metodología 5S</h1>
+    <p>Sistema japonés de organización, orden y productividad en el trabajo</p>
+    <div class="hero-tags">
+      <span class="tag seiri-bg">Seiri</span>
+      <span class="tag seiton-bg">Seiton</span>
+      <span class="tag seiso-bg">Seiso</span>
+      <span class="tag seiketsu-bg">Seiketsu</span>
+      <span class="tag shitsuke-bg">Shitsuke</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== INICIO ===== -->
+<div id="inicio">
+
+  <!-- CARDS (flex padre → hijos) -->
+  <div class="container">
+    <div class="card seiri" onclick="mostrar('seiri')">
+      <div class="card-num">1</div>   <!-- sub-hijo -->
+      <h2>Seiri</h2>                  <!-- sub-hijo -->
+      <p>Clasificar</p>               <!-- sub-hijo -->
+    </div>
+    <div class="card seiton" onclick="mostrar('seiton')">
+      <div class="card-num">2</div>
+      <h2>Seiton</h2>
+      <p>Ordenar</p>
+    </div>
+    <div class="card seiso" onclick="mostrar('seiso')">
+      <div class="card-num">3</div>
+      <h2>Seiso</h2>
+      <p>Limpiar</p>
+    </div>
+    <div class="card seiketsu" onclick="mostrar('seiketsu')">
+      <div class="card-num">4</div>
+      <h2>Seiketsu</h2>
+      <p>Estandarizar</p>
+    </div>
+    <div class="card shitsuke" onclick="mostrar('shitsuke')">
+      <div class="card-num">5</div>
+      <h2>Shitsuke</h2>
+      <p>Disciplina</p>
+    </div>
+  </div>
+
+  <!-- BOTÓN JUEGO debajo de las cards -->
+  <div class="juego-cta">
+    <p>¿Cuánto sabes sobre las 5S?</p>
+    <button class="btn-juego" onclick="iniciarJuego()">🎮 Iniciar Juego</button>
+  </div>
+
+</div><!-- fin #inicio -->
+
+<!-- ===== SEIRI ===== -->
+<section id="seiri" class="detalle">
+  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1200')">
+    <div class="detalle-hero-text">
+      <span class="badge seiri">1</span>
+      <h2>Seiri — Clasificar</h2>
+      <p>Separar lo necesario de lo innecesario</p>
+    </div>
+  </div>
+  <div class="overlay">
+    <!-- flex padre: dos hijos (texto + imagen) -->
+    <div class="detalle-body">
+      <div class="detalle-texto">           <!-- hijo 1 → flex columna con sub-hijos -->
+        <p>Seiri consiste en <strong>identificar y separar</strong> todos los elementos del área de trabajo en dos grupos: los que se necesitan y los que no. Lo innecesario se elimina.</p>
+        <ul>
+          <li>🗑️ Retira herramientas rotas o en desuso</li>
+          <li>📄 Elimina documentos obsoletos</li>
+          <li>📦 Libera espacio valioso</li>
+          <li>⏱️ Reduce el tiempo perdido buscando cosas</li>
+        </ul>
+        <div class="tip">
+          <strong>Regla de oro:</strong> Si no lo has usado en 30 días y no lo usarás pronto, ¡elimínalo!
+        </div>
+      </div>
+      <img class="detalle-img" src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600" alt="Clasificar elementos">
+    </div>
+    <div class="nav-btns">
+      <button onclick="volver()">← Inicio</button>
+      <button class="btn-next" onclick="siguiente('seiton')">Siguiente: Seiton →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEITON ===== -->
+<section id="seiton" class="detalle">
+  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200')">
+    <div class="detalle-hero-text">
+      <span class="badge seiton">2</span>
+      <h2>Seiton — Ordenar</h2>
+      <p>Un lugar para cada cosa, cada cosa en su lugar</p>
+    </div>
+  </div>
+  <div class="overlay">
+    <div class="detalle-body">
+      <div class="detalle-texto">
+        <p>Seiton define <strong>un lugar específico para cada elemento</strong> necesario, de manera que cualquier persona pueda encontrarlo, usarlo y devolverlo fácilmente.</p>
+        <ul>
+          <li>🏷️ Etiqueta cada objeto y su ubicación</li>
+          <li>📍 Coloca lo más usado al alcance de la mano</li>
+          <li>🗂️ Organiza por frecuencia de uso</li>
+          <li>✅ Cualquier persona puede encontrar lo que busca</li>
+        </ul>
+        <div class="tip">
+          <strong>Beneficio clave:</strong> Ahorro de tiempo y reducción de errores por objetos mal ubicados.
+        </div>
+      </div>
+      <img class="detalle-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600" alt="Ordenar elementos">
+    </div>
+    <div class="nav-btns">
+      <button onclick="siguiente('seiri')">← Seiri</button>
+      <button class="btn-next" onclick="siguiente('seiso')">Siguiente: Seiso →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEISO ===== -->
+<section id="seiso" class="detalle">
+  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1200')">
+    <div class="detalle-hero-text">
+      <span class="badge seiso">3</span>
+      <h2>Seiso — Limpiar</h2>
+      <p>Limpiar e inspeccionar para detectar problemas</p>
+    </div>
+  </div>
+  <div class="overlay">
+    <div class="detalle-body">
+      <div class="detalle-texto">
+        <p>Seiso no es solo limpiar: es <strong>limpiar con propósito de inspección</strong>. Al limpiar se detectan fugas, desgastes y fallas antes de que se conviertan en problemas mayores.</p>
+        <ul>
+          <li>🧹 Limpia máquinas, pisos y superficies diariamente</li>
+          <li>🔍 Inspecciona mientras limpias</li>
+          <li>⚠️ Detecta fallas tempranas</li>
+          <li>😊 Mejora el ambiente y la motivación del equipo</li>
+        </ul>
+        <div class="tip">
+          <strong>Diferencia clave:</strong> Seiso = limpiar + inspeccionar. No son tareas separadas.
+        </div>
+      </div>
+      <img class="detalle-img" src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600" alt="Limpiar el área">
+    </div>
+    <div class="nav-btns">
+      <button onclick="siguiente('seiton')">← Seiton</button>
+      <button class="btn-next" onclick="siguiente('seiketsu')">Siguiente: Seiketsu →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEIKETSU ===== -->
+<section id="seiketsu" class="detalle">
+  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200')">
+    <div class="detalle-hero-text">
+      <span class="badge seiketsu">4</span>
+      <h2>Seiketsu — Estandarizar</h2>
+      <p>Crear normas para mantener las 3 primeras S</p>
+    </div>
+  </div>
+  <div class="overlay">
+    <div class="detalle-body">
+      <div class="detalle-texto">
+        <p>Seiketsu consiste en <strong>crear normas, checklists y procedimientos</strong> que garanticen que Seiri, Seiton y Seiso se mantengan en el tiempo, no solo cuando hay supervisión.</p>
+        <ul>
+          <li>📋 Crea listas de verificación (checklists)</li>
+          <li>📸 Usa fotos del "estado ideal" como referencia</li>
+          <li>📅 Establece calendarios de limpieza y orden</li>
+          <li>👁️ Auditorías periódicas del área</li>
+        </ul>
+        <div class="tip">
+          <strong>Resultado:</strong> El orden deja de depender de la memoria y se convierte en un sistema.
+        </div>
+      </div>
+      <img class="detalle-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" alt="Estandarizar procesos">
+    </div>
+    <div class="nav-btns">
+      <button onclick="siguiente('seiso')">← Seiso</button>
+      <button class="btn-next" onclick="siguiente('shitsuke')">Siguiente: Shitsuke →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHITSUKE ===== -->
+<section id="shitsuke" class="detalle">
+  <div class="detalle-hero" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200')">
+    <div class="detalle-hero-text">
+      <span class="badge shitsuke">5</span>
+      <h2>Shitsuke — Disciplina</h2>
+      <p>Convertir las 5S en hábito y cultura</p>
+    </div>
+  </div>
+  <div class="overlay">
+    <div class="detalle-body">
+      <div class="detalle-texto">
+        <p>Shitsuke es la S más difícil: <strong>mantener y mejorar las 4 S anteriores de forma continua</strong>, haciendo que se conviertan en parte de la cultura y el hábito diario.</p>
+        <ul>
+          <li>🔄 Repite y refuerza los hábitos cada día</li>
+          <li>🎓 Capacita continuamente al equipo</li>
+          <li>📊 Mide y comunica los resultados</li>
+          <li>🏆 Reconoce y celebra los logros</li>
+        </ul>
+        <div class="tip">
+          <strong>Clave del éxito:</strong> Sin Shitsuke, las otras 4S se deterioran con el tiempo.
+        </div>
+      </div>
+      <img class="detalle-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="Disciplina en equipo">
+    </div>
+    <div class="nav-btns">
+      <button onclick="siguiente('seiketsu')">← Seiketsu</button>
+      <button class="btn-next" onclick="volver()">← Inicio</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JUEGO ===== -->
+<section id="juego" class="detalle juego-section">
+  <div class="overlay">
+
+    <!-- Cabecera del juego (flex padre → hijos) -->
+    <div class="game-header">
+      <div class="game-info">                     <!-- hijo 1 -->
+        <h2>Quiz 5S 🎯</h2>
+        <span id="q-progreso">Pregunta 1 / 10</span>
+      </div>
+      <div class="game-stats">                    <!-- hijo 2 -->
+        <div class="stat-box">⏱️ <span id="timer">02:00</span></div>
+        <div class="stat-box">⭐ <span id="puntaje">0</span> pts</div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de pregunta -->
+    <div id="tarjeta-pregunta" class="tarjeta-pregunta">
+      <img id="q-img" src="" alt="Imagen de la pregunta" class="q-img">
+      <p id="q-texto" class="q-texto"></p>
+      <!-- Opciones (flex padre → hijos botones) -->
+      <div id="opciones" class="opciones-grid"></div>
+      <p id="feedback" class="feedback"></p>
+    </div>
+
+    <!-- Resultados finales (oculto hasta terminar) -->
+    <div id="resultados" class="resultados" style="display:none">
+      <h3 id="res-titulo"></h3>
+      <div class="res-score" id="res-score"></div>
+      <div id="res-detalle"></div>
+      <div class="res-btns">
+        <button onclick="iniciarJuego()" class="btn-reintentar">🔄 Jugar de nuevo</button>
+        <button onclick="volver()">← Salir</button>
+      </div>
+    </div>
+
+    <button id="btn-salir-juego" onclick="volver()">✕ Salir del juego</button>
+
+  </div>
+</section>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+const preguntas = [
+  {
+    q: "¿Qué significa la primera S — SEIRI?",
+    img: "https://images.unsplash.com/photo-1616628188859-7a11abb6fcc9?w=500",
+    ops: ["Ordenar el espacio", "Clasificar: separar lo necesario", "Limpiar el área de trabajo", "Crear normas de limpieza"],
+    ok: 1
+  },
+  {
+    q: "Seiri busca eliminar todo lo que sea...",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500",
+    ops: ["Nuevo y costoso", "Útil y frecuente", "Innecesario o sin uso", "Limpio y ordenado"],
+    ok: 2
+  },
+  {
+    q: "¿Qué significa la segunda S — SEITON?",
+    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500",
+    ops: ["Clasificar elementos", "Ordenar: un lugar para cada cosa", "Estandarizar procesos", "Practicar la disciplina"],
+    ok: 1
+  },
+  {
+    q: "¿Cuál es el lema principal de SEITON?",
+    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500",
+    ops: ["Limpiar para inspeccionar", "Un lugar para cada cosa, cada cosa en su lugar", "Eliminar lo que sobra", "Crear hábitos duraderos"],
+    ok: 1
+  },
+  {
+    q: "¿Qué significa la tercera S — SEISO?",
+    img: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=500",
+    ops: ["Estandarizar procedimientos", "Ordenar herramientas", "Limpiar e inspeccionar", "Clasificar documentos"],
+    ok: 2
+  },
+  {
+    q: "Además de limpiar, Seiso sirve para...",
+    img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500",
+    ops: ["Eliminar empleados", "Detectar fallas y problemas a tiempo", "Crear checklists de normas", "Ordenar el almacén"],
+    ok: 1
+  },
+  {
+    q: "¿Qué significa la cuarta S — SEIKETSU?",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500",
+    ops: ["Disciplina constante del equipo", "Limpiar a fondo cada semana", "Estandarizar: crear normas y reglas", "Clasificar objetos por color"],
+    ok: 2
+  },
+  {
+    q: "Seiketsu se logra principalmente mediante...",
+    img: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=500",
+    ops: ["Desorden creativo", "Normas, checklists y procedimientos claros", "Eliminar todo el material", "Trabajar sin supervisión"],
+    ok: 1
+  },
+  {
+    q: "¿Qué significa la quinta S — SHITSUKE?",
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500",
+    ops: ["Clasificar los elementos del área", "Ordenar espacios de trabajo", "Limpiar máquinas y pisos", "Disciplina: mantener y mejorar los hábitos"],
+    ok: 3
+  },
+  {
+    q: "Las 5S tienen su origen en...",
+    img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500",
+    ops: ["Estados Unidos (Ford)", "Alemania (manufactura)", "Japón (Toyota Production System)", "China (manufactura moderna)"],
+    ok: 2
+  }
+];
+
+let current = 0;
+let score = 0;
+let respondida = false;
+let tiempo = 120;
+let intervalo;
+let historial = [];
+
+function mostrar(id) {
+  document.getElementById("inicio").style.display = "none";
+  document.querySelector(".hero").style.display = "none";
+  document.querySelectorAll(".detalle").forEach(e => e.style.display = "none");
+  document.getElementById(id).style.display = "block";
+  window.scrollTo(0, 0);
+}
+
+function siguiente(id) {
+  document.querySelectorAll(".detalle").forEach(e => e.style.display = "none");
+  document.getElementById(id).style.display = "block";
+  window.scrollTo(0, 0);
+}
+
+function volver() {
+  clearInterval(intervalo);
+  document.querySelectorAll(".detalle").forEach(e => e.style.display = "none");
+  document.getElementById("inicio").style.display = "block";
+  document.querySelector(".hero").style.display = "flex";
+  window.scrollTo(0, 0);
+}
+
+/* ---- JUEGO ---- */
+function iniciarJuego() {
+  current = 0;
+  score = 0;
+  historial = [];
+  tiempo = 120;
+
+  document.getElementById("resultados").style.display = "none";
+  document.getElementById("tarjeta-pregunta").style.display = "block";
+  document.getElementById("btn-salir-juego").style.display = "inline-block";
+  document.getElementById("puntaje").textContent = "0";
+
+  mostrar("juego");
+  mostrarPregunta(0);
+  clearInterval(intervalo);
+  iniciarTimer();
+}
+
+function mostrarPregunta(i) {
+  respondida = false;
+  const p = preguntas[i];
+  document.getElementById("q-progreso").textContent = `Pregunta ${i + 1} / ${preguntas.length}`;
+  document.getElementById("q-img").src = p.img;
+  document.getElementById("q-texto").textContent = p.q;
+  document.getElementById("feedback").textContent = "";
+
+  const grid = document.getElementById("opciones");
+  grid.innerHTML = "";
+  p.ops.forEach((op, idx) => {
+    const btn = document.createElement("button");
+    btn.className = "opcion-btn";
+    btn.innerHTML = `<span class="op-letra">${["A","B","C","D"][idx]}</span> ${op}`;
+    btn.onclick = () => responder(idx);
+    grid.appendChild(btn);
+  });
+}
+
+function responder(idx) {
+  if (respondida) return;
+  respondida = true;
+  const p = preguntas[current];
+  const btns = document.querySelectorAll(".opcion-btn");
+  const correcto = (idx === p.ok);
+
+  btns.forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === p.ok) btn.classList.add("btn-correcta");
+    else if (i === idx) btn.classList.add("btn-incorrecta");
+  });
+
+  const fb = document.getElementById("feedback");
+  if (correcto) {
+    score++;
+    document.getElementById("puntaje").textContent = score;
+    fb.textContent = "✅ ¡Correcto!";
+    fb.style.color = "#2ecc71";
+  } else {
+    fb.textContent = `❌ La respuesta correcta era: ${p.ops[p.ok]}`;
+    fb.style.color = "#e74c3c";
+  }
+
+  historial.push({ pregunta: p.q, correcto, tuRespuesta: p.ops[idx], correcta: p.ops[p.ok] });
+
+  setTimeout(() => {
+    current++;
+    if (current < preguntas.length) {
+      mostrarPregunta(current);
+    } else {
+      clearInterval(intervalo);
+      mostrarResultados();
+    }
+  }, 1800);
+}
+
+function iniciarTimer() {
+  intervalo = setInterval(() => {
+    const m = Math.floor(tiempo / 60);
+    const s = tiempo % 60;
+    document.getElementById("timer").textContent =
+      `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+    tiempo--;
+    if (tiempo < 0) {
+      clearInterval(intervalo);
+      mostrarResultados();
+    }
+  }, 1000);
+}
+
+function mostrarResultados() {
+  document.getElementById("tarjeta-pregunta").style.display = "none";
+  document.getElementById("btn-salir-juego").style.display = "none";
+  const res = document.getElementById("resultados");
+  res.style.display = "block";
+
+  const pct = Math.round((score / preguntas.length) * 100);
+  let emoji, msg;
+  if (pct === 100) { emoji = "🏆"; msg = "¡Perfecto! ¡Eres un experto en 5S!"; }
+  else if (pct >= 70) { emoji = "🎉"; msg = "¡Muy bien! Tienes buen dominio de las 5S."; }
+  else if (pct >= 50) { emoji = "👍"; msg = "Bien, pero puedes mejorar repasando las secciones."; }
+  else { emoji = "📚"; msg = "Te recomendamos repasar las 5 secciones y volver a intentarlo."; }
+
+  document.getElementById("res-titulo").textContent = `${emoji} ${msg}`;
+  document.getElementById("res-score").innerHTML =
+    `<span class="score-num">${score}</span> <span class="score-den">/ ${preguntas.length}</span><br><span class="score-pct">${pct}%</span>`;
+
+  let detalle = "<div class='res-lista'>";
+  historial.forEach((h, i) => {
+    detalle += `
+      <div class="res-item ${h.correcto ? 'ok' : 'fail'}">
+        <span>${i + 1}. ${h.pregunta}</span>
+        <span>${h.correcto ? "✅" : `❌ → ${h.correcta}`}</span>
+      </div>`;
+  });
+  detalle += "</div>";
+  document.getElementById("res-detalle").innerHTML = detalle;
+}
+</script>
+</body>
+</html>
