@@ -424,10 +424,15 @@ body {
 
 .feedback {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   min-height: 24px;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
+
+.fb-ok   { background: rgba(39,174,96,0.2);  color: #2ecc71; }
+.fb-fail { background: rgba(231,76,60,0.2);  color: #e74c3c; }
 
 /* RESULTADOS */
 .resultados {
