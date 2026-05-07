@@ -515,6 +515,58 @@ body {
 /* ============================================
    RESPONSIVE — celulares
    ============================================ */
+/* ============================================
+   FOOTER / QR
+   ============================================ */
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 40px 5%;
+}
+
+.footer-inner {
+  display: flex;               /* FLEX PADRE */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* hijo 1 */
+.footer-info {
+  display: flex;               /* FLEX PADRE (nivel 2) */
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-info h3 { font-size: 1.3rem; }
+.footer-info p  { color: #aaa; font-size: 0.95rem; }
+.footer-link a  { color: #3498db; text-decoration: none; }
+.footer-link a:hover { text-decoration: underline; }
+
+/* hijo 2 */
+.footer-qr {
+  display: flex;               /* FLEX PADRE (nivel 2) */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-qr p { font-size: 0.85rem; color: #aaa; }
+
+.qr-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background: white;
+  padding: 6px;
+}
+
+/* ============================================
+   RESPONSIVE — celulares
+   ============================================ */
 @media (max-width: 640px) {
 
   /* las cards se hacen más anchas */
